@@ -4,7 +4,7 @@ All notable changes to this project are documented in this file.
 
 This changelog starts at 2.0.5 — see the [GitHub Releases](https://github.com/endel/NativeWebSocket/releases) page for earlier versions.
 
-## 2.0.6 - 2026-08-06
+## 2.0.7 - 2026-08-06
 
 ### Fixed
 
@@ -13,6 +13,8 @@ This changelog starts at 2.0.5 — see the [GitHub Releases](https://github.com/
   Events now record their position as a `null` placeholder in the message queue, with the actions in a side queue; both are appended under the same lock, so a `null` entry always has an event waiting for it.
 
   This only affected consumers without a `SynchronizationContext` — MonoGame, console apps and test hosts. With one present (as in Unity) events are posted directly and were already ordered correctly. Regression introduced in 2.0.1.
+
+> 2.0.6 was never published — its release workflow was stranded by a GitHub Actions outage and could not be re-queued, so this content ships as 2.0.7.
 
 ## 2.0.5 - 2026-08-06
 
